@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Total Users</title>
+</head>
+<body>
+<h1>Total Users Count is {{usercount}}</h1>
+{{pagination.links}}
+
+<br>
+{% for user in users %}
+    <!--{{loop.index+(page-1)*per_page}}-->
+    {{user["username"]}}
+{%endfor%}
+
+<br>
+{{pagination.links}}
+</body>
+</html>
